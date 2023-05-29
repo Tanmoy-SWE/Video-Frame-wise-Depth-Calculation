@@ -1,39 +1,38 @@
-# Import Libraries
 import cv2
 import time
 import mediapipe as mp
 
-# Grabbing the Holistic Model from Mediapipe and
-# Initializing the Model
+# Grabbing the Holistic Model from Mediapipe and Initializing the Model
 mp_holistic = mp.solutions.holistic
 holistic_model = mp_holistic.Holistic(
     min_detection_confidence=0.5,
     min_tracking_confidence=0.5
 )
 
-# Initializing the drawing utils for drawing the facial landmarks on image
+# Initializing the drawing utils for drawing the facial landmarks on the image
 mp_drawing = mp.solutions.drawing_utils
 
 # (0) in VideoCapture is used to connect to your computer's default camera
 capture = cv2.VideoCapture(0)
 
-# Initializing current time and precious time for calculating the FPS
+# Initializing current time and previous time for calculating the FPS
 previousTime = 0
 currentTime = 0
 
+# Focal length of the camera (adjust as per your camera)
+focal_length = 1.40625
+
 while capture.isOpened():
-    # capture frame by frame
+    # Capture frame by frame
     ret, frame = capture.read()
 
-    # resizing the frame for better view
+    # Resizing the frame for better view
     frame = cv2.resize(frame, (800, 600))
 
-    # Converting the from BGR to RGB
+    # Converting from BGR to RGB
     image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-    # Making predictions using holistic model
-    # To improve performance, optionally mark the image as not writeable to
-    # pass by reference.
+    # Making predictions using the holistic model
     image.flags.writeable = False
     results = holistic_model.process(image)
     image.flags.writeable = True
@@ -41,31 +40,23 @@ while capture.isOpened():
     # Converting back the RGB image to BGR
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
 
-    # Drawing the Facial Landmarks
+    # Drawing the facial landmarks
     mp_drawing.draw_landmarks(
         image,
         results.face_landmarks,
         mp_holistic.FACEMESH_CONTOURS,
-        mp_drawing.DrawingSpec(
-            color=(255, 0, 255),
-            thickness=1,
-            circle_radius=1
-        ),
-        mp_drawing.DrawingSpec(
-            color=(0, 255, 255),
-            thickness=1,
-            circle_radius=1
-        )
+        mp_drawing.DrawingSpec(color=(255, 0, 255), thickness=1, circle_radius=1),
+        mp_drawing.DrawingSpec(color=(0, 255, 255), thickness=1, circle_radius=1)
     )
 
-    # Drawing Right hand Land Marks
+    # Drawing the right hand landmarks
     mp_drawing.draw_landmarks(
         image,
         results.right_hand_landmarks,
         mp_holistic.HAND_CONNECTIONS
     )
 
-    # Drawing Left hand Land Marks
+    # Drawing the left hand landmarks
     mp_drawing.draw_landmarks(
         image,
         results.left_hand_landmarks,
@@ -80,14 +71,6 @@ while capture.isOpened():
     # Displaying FPS on the image
     cv2.putText(image, str(int(fps)) + " FPS", (10, 70), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 255, 0), 2)
 
-    # Display the resulting image
-    cv2.imshow("Facial and Hand Landmarks", image)
-
-    # Making predictions using holistic model
-    image.flags.writeable = False
-    results = holistic_model.process(image)
-    image.flags.writeable = True
-
     # # Accessing and calculating the depth of hand landmarks
     # if results.right_hand_landmarks:
     #     for landmark in results.right_hand_landmarks.landmark:
@@ -97,43 +80,37 @@ while capture.isOpened():
     #         landmark_z = landmark.z
     #
     #         # Calculate the depth (distance from the camera)
-    #         depth = landmark_z * (frame.shape[0] + frame.shape[1]) / 2  # Adjust the scale as needed
+    #         depth = landmark_z * focal_length  # Adjust the scale as needed
     #         print("Right Hand Landmark - Depth:", depth)
-    #
-    # if results.left_hand_landmarks:
-    #     for landmark in results.left_hand_landmarks.landmark:
-    #         # Get the normalized coordinates
-    #         landmark_x = landmark.x
-    #         landmark_y = landmark.y
-    #         landmark_z = landmark.z
-    #
-    #         # Calculate the depth (distance from the camera)
-    #         depth = landmark_z * (frame.shape[0] + frame.shape[1]) / 2  # Adjust the scale as needed
-    #         print("Left Hand Landmark - Depth:", depth)
 
-    # Accessing and calculating the depth of face landmarks
-    if results.face_landmarks:
-        for idx, landmark in enumerate(results.face_landmarks.landmark):
+    if results.left_hand_landmarks:
+        for landmark in results.left_hand_landmarks.landmark:
             # Get the normalized coordinates
             landmark_x = landmark.x
             landmark_y = landmark.y
             landmark_z = landmark.z
 
             # Calculate the depth (distance from the camera)
-            depth = landmark_z * (frame.shape[0] + frame.shape[1]) / 2  # Adjust the scale as needed
-            print("Face Landmark", idx, "- Depth:", depth)
+            depth = landmark_z   # Adjust the scale as needed
+            print("Left Hand Landmark - Depth:", depth)
+
+    # #Accessing and calculating the depth of face landmarks
+    # if results.face_landmarks:
+    #     for idx, landmark in enumerate(results.face_landmarks.landmark):
+    #         # Get the normalized coordinates
+    #         landmark_x = landmark.x
+    #         landmark_y = landmark.y
+    #         landmark_z = landmark.z
+    #
+    #         # Calculate the depth (distance from the camera)
+    #         depth = landmark_z * focal_length  # Adjust the scale as needed
+    #         print("Face Landmark", idx, "- Depth:", depth)
+
+    # Display the resulting image
+    cv2.imshow("Facial and Hand Landmarks", image)
 
     # Enter key 'q' to break the loop
     if cv2.waitKey(5) & 0xFF == ord('q'):
         break
-
-# When all the process is done
-# Release the capture and destroy all windows
 capture.release()
 cv2.destroyAllWindows()
-
-# Code to access landmarks
-for landmark in mp_holistic.HandLandmark:
-    print(landmark, landmark.value)
-
-print(mp_holistic.HandLandmark.WRIST.value)
