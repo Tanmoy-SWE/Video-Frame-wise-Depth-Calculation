@@ -127,17 +127,16 @@ while capture.isOpened():
             depth = landmark_z * focal_length  # Adjust the scale as needed
             print("Right Hand Landmark - Depth:", depth)
 
-    # Countdown timer logic
-    if countdown_active:
-        current_time = time.time()
-        time_left = countdown_end_time - current_time
 
-        # Display countdown on the screen
-        cv2.putText(image, "Countdown: " + str(int(time_left)), (10, 220), cv2.FONT_HERSHEY_COMPLEX, 1,
+    current_time = time.time()
+    time_left = countdown_end_time - current_time
+
+    # Display countdown on the screen
+    cv2.putText(image, "Countdown: " + str(int(time_left%3+1)), (10, 220), cv2.FONT_HERSHEY_COMPLEX, 1,
                     (0, 0, 255), 2)
 
-        # Check if countdown has ended
-        if time_left <= 0:
+    # Check if countdown has ended
+    if time_left%3+1 <= 0:
             countdown_active = False
 
             # Determine the computer's gesture randomly
@@ -170,4 +169,3 @@ while capture.isOpened():
 
 capture.release()
 cv2.destroyAllWindows()
-
