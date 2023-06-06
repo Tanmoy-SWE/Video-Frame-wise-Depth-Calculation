@@ -73,12 +73,6 @@ def calculate_distance(landmark1, landmark2):
 # Initializing the player's gesture
 player_gesture = None
 
-# Variables for countdown
-countdown_start_time = 0
-countdown_duration = 3
-countdown_active = False
-countdown_end_time = 0
-
 while capture.isOpened():
     # Capture frame by frame
     ret, frame = capture.read()
@@ -91,11 +85,13 @@ while capture.isOpened():
 
     # Making predictions using the holistic model
     image.flags.writeable = False
-    results = holistic_model.process(image)
+    results = holistic_model.process(image
+                                     )
     image.flags.writeable = True
 
     # Converting back the RGB image to BGR
     image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
+
 
     # Drawing the right hand landmarks
     mp_drawing.draw_landmarks(
@@ -117,55 +113,35 @@ while capture.isOpened():
         # Determine the gesture based on hand landmarks
         player_gesture = determine_gesture(results.right_hand_landmarks)
 
-        for landmark in results.right_hand_landmarks.landmark:
-            # Get the normalized coordinates
-            landmark_x = landmark.x
-            landmark_y = landmark.y
-            landmark_z = landmark.z
+    # Determine the computer's gesture randomly
+    countdown = 3-(int(currentTime)%3)
+    cv2.putText(image, "Countdown for Move: " + str(countdown), (10, 100), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
+    if (int(currentTime)%6)>=3:
+        computer_gesture = random.choice([GESTURE_ROCK, GESTURE_PAPER, GESTURE_SCISSORS])
+        # Display the player's and computer's gestures
+        cv2.putText(image, "Player: " + str(player_gesture), (10, 140), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
+        cv2.putText(image, "Computer: " + str(computer_gesture), (10, 180), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
 
-            # Calculate the depth (distance from the camera)
-            depth = landmark_z * focal_length  # Adjust the scale as needed
-            print("Right Hand Landmark - Depth:", depth)
 
+        # Determine the result of the game
+        result_text = ""
+        if player_gesture and computer_gesture:
+            if player_gesture == computer_gesture:
+                result_text = "It's a tie!"
+            elif RULES[player_gesture] == computer_gesture:
+                result_text = "You win!"
+            else:
+                result_text = "Computer wins!"
+        # Display the result of the game
+        cv2.putText(image, result_text, (10, 240), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
+        time.sleep(2.0)
 
-    current_time = time.time()
-    time_left = countdown_end_time - current_time
+    # Display the resulting image
+    cv2.imshow("Facial and Hand Landmarks", image)
 
-    # Display countdown on the screen
-    cv2.putText(image, "Countdown: " + str(int(time_left%3+1)), (10, 220), cv2.FONT_HERSHEY_COMPLEX, 1,
-                    (0, 0, 255), 2)
-
-    # Check if countdown has ended
-    if time_left%3+1 <= 0:
-            countdown_active = False
-
-            # Determine the computer's gesture randomly
-            computer_gesture = random.choice([GESTURE_ROCK, GESTURE_PAPER, GESTURE_SCISSORS])
-
-            # Display the player's and computer's gestures
-            cv2.putText(image, "Player: " + str(player_gesture), (10, 100), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
-            cv2.putText(image, "Computer: " + str(computer_gesture), (10, 140), cv2.FONT_HERSHEY_COMPLEX, 1,
-                        (0, 0, 255), 2)
-
-            # Determine the result of the game
-            result_text = ""
-            if player_gesture and computer_gesture:
-                if player_gesture == computer_gesture:
-                    result_text = "It's a tie!"
-                elif RULES[player_gesture] == computer_gesture:
-                    result_text = "You win!"
-                else:
-                    result_text = "Computer wins!"
-
-                # Display the result of the game
-                cv2.putText(image, result_text, (10, 180), cv2.FONT_HERSHEY_COMPLEX, 1, (0, 0, 255), 2)
-
-                # Display the resulting image
-                cv2.imshow("Facial and Hand Landmarks", image)
-
-                # Enter key 'q' to break the loop
-                if cv2.waitKey(5) & 0xFF == ord('q'):
-                    break
+    # Enter key 'q' to break the loop
+    if cv2.waitKey(5) & 0xFF == ord('q'):
+        break
 
 capture.release()
 cv2.destroyAllWindows()
