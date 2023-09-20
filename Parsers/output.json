@@ -1,0 +1,807 @@
+{
+    "U1": {
+        "W2": {
+            "User": "U1",
+            "Orientation": "LeftHand",
+            "Session": "Day01",
+            "View": "Front",
+            "FrameRate": "30",
+            "FileName": "U1W2F",
+            "no_of_trials": 21,
+            "trials": {
+                "1:": {
+                    "starting": "50/54",
+                    "ending": "88/91"
+                },
+                "2:": {
+                    "starting": "139/140",
+                    "ending": "160/171"
+                },
+                "3:": {
+                    "starting": "220/224",
+                    "ending": "243/253"
+                },
+                "4:": {
+                    "starting": "295/302",
+                    "ending": "313/322"
+                },
+                "5:": {
+                    "starting": "357/361",
+                    "ending": "372/387"
+                },
+                "6:": {
+                    "starting": "431/432",
+                    "ending": "450/460"
+                },
+                "7:": {
+                    "starting": "506/510",
+                    "ending": "525/533"
+                },
+                "8:": {
+                    "starting": "566/568",
+                    "ending": "588/595"
+                },
+                "9:": {
+                    "starting": "644/646",
+                    "ending": "665/673"
+                },
+                "10:": {
+                    "starting": "723/725",
+                    "ending": "748/759"
+                },
+                "11:": {
+                    "starting": "799/801",
+                    "ending": "821/828"
+                },
+                "12:": {
+                    "starting": "876/879",
+                    "ending": "901/921"
+                },
+                "13:": {
+                    "starting": "967/971",
+                    "ending": "999/1001"
+                },
+                "14:": {
+                    "starting": "1047/1050",
+                    "ending": "1065/1084"
+                },
+                "15:": {
+                    "starting": "1138/1139",
+                    "ending": "1151/1168"
+                },
+                "16:": {
+                    "starting": "1216/1218",
+                    "ending": "1236/1252"
+                },
+                "17:": {
+                    "starting": "1297/1301",
+                    "ending": "1314/1329"
+                },
+                "18:": {
+                    "starting": "1375/1378",
+                    "ending": "1409/1416"
+                },
+                "19:": {
+                    "starting": "1455/1459",
+                    "ending": "1502/1510"
+                },
+                "20:": {
+                    "starting": "1556/1561",
+                    "ending": "1581/1588"
+                },
+                "21:": {
+                    "starting": "1631/1636",
+                    "ending": "1666/1672"
+                }
+            }
+        }
+    },
+    "U2": {
+        "W2": {
+            "User": "U2",
+            "Orientation": "RightHand",
+            "Session": "Day01",
+            "View": "Front",
+            "FrameRate": "14",
+            "FileName": "U2W2F",
+            "no_of_trials": 12,
+            "trials": {
+                "1:": {
+                    "starting": "20/34",
+                    "ending": "55/60"
+                },
+                "2:": {
+                    "starting": "70/73",
+                    "ending": "90/93"
+                },
+                "3:": {
+                    "starting": "113/119",
+                    "ending": "130/132"
+                },
+                "4:": {
+                    "starting": "158/161",
+                    "ending": "174/175"
+                },
+                "5:": {
+                    "starting": "204/211",
+                    "ending": "225/227"
+                },
+                "6:": {
+                    "starting": "251/259",
+                    "ending": "272/274"
+                },
+                "7:": {
+                    "starting": "300/305",
+                    "ending": "318/320"
+                },
+                "8:": {
+                    "starting": "343/352",
+                    "ending": "368/370"
+                },
+                "9:": {
+                    "starting": "402/405",
+                    "ending": "421/422"
+                },
+                "10:": {
+                    "starting": "451/457",
+                    "ending": "473/474"
+                },
+                "11:": {
+                    "starting": "505/510",
+                    "ending": "526/527"
+                },
+                "12:": {
+                    "starting": "565/576",
+                    "ending": "587/588"
+                }
+            }
+        }
+    },
+    "U3": {
+        "W2": {
+            "User": "U3",
+            "Orientation": "RightHand",
+            "Session": "Day01",
+            "View": "Front",
+            "FrameRate": "24",
+            "FileName": "U3W2F",
+            "no_of_trials": 17,
+            "trials": {
+                "1:": {
+                    "starting": "32/33",
+                    "ending": "65/78"
+                },
+                "2:": {
+                    "starting": "108/110",
+                    "ending": "135/148"
+                },
+                "3:": {
+                    "starting": "182/185",
+                    "ending": "210/224"
+                },
+                "4:": {
+                    "starting": "254/257",
+                    "ending": "274/294"
+                },
+                "5:": {
+                    "starting": "328/330",
+                    "ending": "353/368"
+                },
+                "6:": {
+                    "starting": "398/401",
+                    "ending": "421/435"
+                },
+                "7:": {
+                    "starting": "470/473",
+                    "ending": "492/508"
+                },
+                "8:": {
+                    "starting": "538/542",
+                    "ending": "563/573"
+                },
+                "9:": {
+                    "starting": "604/606",
+                    "ending": "623/638"
+                },
+                "10:": {
+                    "starting": "670/673",
+                    "ending": "692/703"
+                },
+                "11:": {
+                    "starting": "735/737",
+                    "ending": "752/763"
+                },
+                "12:": {
+                    "starting": "797/800",
+                    "ending": "820/828"
+                },
+                "13:": {
+                    "starting": "859/861",
+                    "ending": "878/889"
+                },
+                "14:": {
+                    "starting": "921/925",
+                    "ending": "942/953"
+                },
+                "15:": {
+                    "starting": "988/992",
+                    "ending": "1009/1017"
+                },
+                "16:": {
+                    "starting": "1052/1056",
+                    "ending": "1070/1082"
+                },
+                "17:": {
+                    "starting": "1116/1122",
+                    "ending": "1134/1145"
+                }
+            }
+        }
+    },
+    "U4": {
+        "W2": {
+            "User": "U4",
+            "Orientation": "LeftHand",
+            "Session": "Day01",
+            "View": "Front",
+            "FrameRate": "24",
+            "FileName": "U4W2F",
+            "no_of_trials": 12,
+            "trials": {
+                "1:": {
+                    "starting": "18/20",
+                    "ending": "58/67"
+                },
+                "2:": {
+                    "starting": "86/89",
+                    "ending": "113/121"
+                },
+                "3:": {
+                    "starting": "138/141",
+                    "ending": "165/173"
+                },
+                "4:": {
+                    "starting": "189/191",
+                    "ending": "216/223"
+                },
+                "5:": {
+                    "starting": "238/240",
+                    "ending": "270/277"
+                },
+                "6:": {
+                    "starting": "294/296",
+                    "ending": "322/329"
+                },
+                "7:": {
+                    "starting": "349/351",
+                    "ending": "378/385"
+                },
+                "8:": {
+                    "starting": "399/401",
+                    "ending": "426/433"
+                },
+                "9:": {
+                    "starting": "447/449",
+                    "ending": "475/482"
+                },
+                "10:": {
+                    "starting": "498/501",
+                    "ending": "528/537"
+                },
+                "11:": {
+                    "starting": "551/553",
+                    "ending": "582/589"
+                },
+                "12:": {
+                    "starting": "601/603",
+                    "ending": "629/637"
+                }
+            }
+        }
+    },
+    "U5": {
+        "W2": {
+            "User": "U5",
+            "Orientation": "RightHand",
+            "Session": "Day01",
+            "View": "Front",
+            "FrameRate": "14",
+            "FileName": "U5W2F",
+            "no_of_trials": 10,
+            "trials": {
+                "1:": {
+                    "starting": "13/26",
+                    "ending": "38/41"
+                },
+                "2:": {
+                    "starting": "63/69",
+                    "ending": "82/84"
+                },
+                "3:": {
+                    "starting": "112/120",
+                    "ending": "132/134"
+                },
+                "4:": {
+                    "starting": "157/164",
+                    "ending": "174/175"
+                },
+                "5:": {
+                    "starting": "193/199",
+                    "ending": "210/212"
+                },
+                "6:": {
+                    "starting": "227/237",
+                    "ending": "237/249"
+                },
+                "7:": {
+                    "starting": "270/279",
+                    "ending": "289/291"
+                },
+                "8:": {
+                    "starting": "310/317",
+                    "ending": "330/332"
+                },
+                "9:": {
+                    "starting": "350/360",
+                    "ending": "370/373"
+                },
+                "10:": {
+                    "starting": "394/401",
+                    "ending": "412/414"
+                }
+            }
+        }
+    },
+    "U6": {
+        "W2": {
+            "User": "U6",
+            "Orientation": "RightHand",
+            "Session": "Day01",
+            "View": "Front",
+            "FrameRate": "24",
+            "FileName": "U6W2F",
+            "no_of_trials": 14,
+            "trials": {
+                "1:": {
+                    "starting": "75/81",
+                    "ending": "98/102"
+                },
+                "2:": {
+                    "starting": "128/132",
+                    "ending": "151/155"
+                },
+                "3:": {
+                    "starting": "184/187",
+                    "ending": "208/211"
+                },
+                "4:": {
+                    "starting": "229/233",
+                    "ending": "253/258"
+                },
+                "5:": {
+                    "starting": "276/280",
+                    "ending": "303/307"
+                },
+                "6:": {
+                    "starting": "324/332",
+                    "ending": "352/356"
+                },
+                "7:": {
+                    "starting": "375/382",
+                    "ending": "401/415"
+                },
+                "8:": {
+                    "starting": "424/430",
+                    "ending": "445/451"
+                },
+                "9:": {
+                    "starting": "469/464",
+                    "ending": "493/497"
+                },
+                "10:": {
+                    "starting": "515/520",
+                    "ending": "537/540"
+                },
+                "11:": {
+                    "starting": "560/564",
+                    "ending": "580/584"
+                },
+                "12:": {
+                    "starting": "602/608",
+                    "ending": "623/627"
+                },
+                "13:": {
+                    "starting": "646/651",
+                    "ending": "667/670"
+                },
+                "14:": {
+                    "starting": "690/695",
+                    "ending": "711/715"
+                }
+            }
+        }
+    },
+    "U8": {
+        "W2": {
+            "User": "U8",
+            "Orientation": "RightHand",
+            "Session": "Day01",
+            "View": "Front",
+            "FrameRate": "30",
+            "FileName": "U8W2F",
+            "no_of_trials": 10,
+            "trials": {
+                "1:": {
+                    "starting": "22/45",
+                    "ending": "83/91"
+                },
+                "2:": {
+                    "starting": "133/150",
+                    "ending": "182/188"
+                },
+                "3:": {
+                    "starting": "232/252",
+                    "ending": "280/286"
+                },
+                "4:": {
+                    "starting": "324/344",
+                    "ending": "370/375"
+                },
+                "5:": {
+                    "starting": "415/436",
+                    "ending": "467/474"
+                },
+                "6:": {
+                    "starting": "511/532",
+                    "ending": "562/567"
+                },
+                "7:": {
+                    "starting": "605/625",
+                    "ending": "656/662"
+                },
+                "8:": {
+                    "starting": "696/716",
+                    "ending": "748/753"
+                },
+                "9:": {
+                    "starting": "793/813",
+                    "ending": "835/840"
+                },
+                "10:": {
+                    "starting": "881/901",
+                    "ending": "930/935"
+                }
+            }
+        }
+    },
+    "U9": {
+        "W2": {
+            "User": "U9",
+            "Orientation": "RightHand",
+            "Session": "Day01",
+            "View": "Front",
+            "FrameRate": "24",
+            "FileName": "U9W2F",
+            "no_of_trials": 11,
+            "trials": {
+                "1:": {
+                    "starting": "22/56",
+                    "ending": "88/92"
+                },
+                "2:": {
+                    "starting": "116/144",
+                    "ending": "175/179"
+                },
+                "3:": {
+                    "starting": "212/232",
+                    "ending": "262/266"
+                },
+                "4:": {
+                    "starting": "293/313",
+                    "ending": "335/340"
+                },
+                "5:": {
+                    "starting": "363/395",
+                    "ending": "417/420"
+                },
+                "6:": {
+                    "starting": "444/469",
+                    "ending": "487/492"
+                },
+                "7:": {
+                    "starting": "514/532",
+                    "ending": "553/558"
+                },
+                "8:": {
+                    "starting": "576/600",
+                    "ending": "619/622"
+                },
+                "9:": {
+                    "starting": "647/670",
+                    "ending": "695/700"
+                },
+                "10:": {
+                    "starting": "722/738",
+                    "ending": "761/764"
+                },
+                "11:": {
+                    "starting": "785/815",
+                    "ending": "838/842"
+                }
+            }
+        }
+    },
+    "U10": {
+        "W2": {
+            "User": "U10",
+            "Orientation": "LeftHand",
+            "Session": "Day01",
+            "View": "Front",
+            "FrameRate": "24",
+            "FileName": "U10W2F",
+            "no_of_trials": 5,
+            "trials": {
+                "17:": {
+                    "starting": "1328/1349",
+                    "ending": "1373/1381"
+                },
+                "18:": {
+                    "starting": "1407/1431",
+                    "ending": "1455/1462"
+                },
+                "19:": {
+                    "starting": "1490/1511",
+                    "ending": "1533/1539"
+                },
+                "20:": {
+                    "starting": "1577/1605",
+                    "ending": "1620/1630"
+                },
+                "21:": {
+                    "starting": "1663/1685",
+                    "ending": "1702/1716"
+                }
+            }
+        }
+    },
+    "U11": {
+        "W2": {
+            "User": "U11",
+            "Orientation": "RightHand",
+            "Session": "Day01",
+            "View": "Front",
+            "FrameRate": "30",
+            "FileName": "U11W2F",
+            "no_of_trials": 11,
+            "trials": {
+                "1:": {
+                    "starting": "36/43",
+                    "ending": "74/89"
+                },
+                "2:": {
+                    "starting": "112/118",
+                    "ending": "158/168"
+                },
+                "3:": {
+                    "starting": "192/199",
+                    "ending": "236/245"
+                },
+                "4:": {
+                    "starting": "271/276",
+                    "ending": "314/324"
+                },
+                "5:": {
+                    "starting": "345/352",
+                    "ending": "388/399"
+                },
+                "6:": {
+                    "starting": "421/428",
+                    "ending": "463/472"
+                },
+                "7:": {
+                    "starting": "491/497",
+                    "ending": "532/542"
+                },
+                "8:": {
+                    "starting": "561/568",
+                    "ending": "600/611"
+                },
+                "9:": {
+                    "starting": "630/637",
+                    "ending": "672/681"
+                },
+                "10:": {
+                    "starting": "699/707",
+                    "ending": "741/751"
+                },
+                "11:": {
+                    "starting": "770/778",
+                    "ending": "816/826"
+                }
+            }
+        }
+    },
+    "U12": {
+        "W2": {
+            "User": "U12",
+            "Orientation": "RightHand",
+            "Session": "Day01",
+            "View": "Front",
+            "FrameRate": "14",
+            "FileName": "U12W2F",
+            "no_of_trials": 12,
+            "trials": {
+                "1:": {
+                    "starting": "12/24",
+                    "ending": "58/68"
+                },
+                "2:": {
+                    "starting": "89/94",
+                    "ending": "115/117"
+                },
+                "3:": {
+                    "starting": "141/151",
+                    "ending": "165/168"
+                },
+                "4:": {
+                    "starting": "186/196",
+                    "ending": "208/217"
+                },
+                "5:": {
+                    "starting": "234/250",
+                    "ending": "264/266"
+                },
+                "6:": {
+                    "starting": "289/293",
+                    "ending": "311/313"
+                },
+                "7:": {
+                    "starting": "339/355",
+                    "ending": "373/375"
+                },
+                "8:": {
+                    "starting": "403/414",
+                    "ending": "431/432"
+                },
+                "9:": {
+                    "starting": "453/455",
+                    "ending": "476/477"
+                },
+                "10:": {
+                    "starting": "501/506",
+                    "ending": "520/523"
+                },
+                "11:": {
+                    "starting": "552/556",
+                    "ending": "570/571"
+                },
+                "12:": {
+                    "starting": "598/605",
+                    "ending": "619/622"
+                }
+            }
+        }
+    },
+    "U13": {
+        "W2": {
+            "User": "U13",
+            "Orientation": "LeftHand",
+            "Session": "Day01",
+            "View": "Front",
+            "FrameRate": "30",
+            "FileName": "U13W2F",
+            "no_of_trials": 14,
+            "trials": {
+                "1:": {
+                    "starting": "22/30",
+                    "ending": "90/97"
+                },
+                "2:": {
+                    "starting": "116/136",
+                    "ending": "170/173"
+                },
+                "3:": {
+                    "starting": "210/227",
+                    "ending": "260/264"
+                },
+                "4:": {
+                    "starting": "307/332",
+                    "ending": "360/365"
+                },
+                "5:": {
+                    "starting": "398/416",
+                    "ending": "449/454"
+                },
+                "6:": {
+                    "starting": "492/511",
+                    "ending": "538/544"
+                },
+                "7:": {
+                    "starting": "578/591",
+                    "ending": "625/634"
+                },
+                "8:": {
+                    "starting": "666/682",
+                    "ending": "726/731"
+                },
+                "9:": {
+                    "starting": "761/780",
+                    "ending": "812/818"
+                },
+                "10:": {
+                    "starting": "850/871",
+                    "ending": "901/908"
+                },
+                "11:": {
+                    "starting": "952/672",
+                    "ending": "1002/1007"
+                },
+                "12:": {
+                    "starting": "1046/1062",
+                    "ending": "1097/1102"
+                },
+                "13:": {
+                    "starting": "1139/1162",
+                    "ending": "1192/1197"
+                },
+                "14:": {
+                    "starting": "1230/1252",
+                    "ending": "1283/1290"
+                }
+            }
+        }
+    },
+    "U15": {
+        "W2": {
+            "User": "U15",
+            "Orientation": "Both",
+            "Session": "Session:",
+            "View": "View:",
+            "FrameRate": "FrameRate:",
+            "FileName": "File:",
+            "no_of_trials": 10,
+            "trials": {
+                "1:": {
+                    "starting": "22/45",
+                    "ending": "83/91"
+                },
+                "2:": {
+                    "starting": "133/150",
+                    "ending": "182/188"
+                },
+                "3:": {
+                    "starting": "232/252",
+                    "ending": "280/286"
+                },
+                "4:": {
+                    "starting": "324/344",
+                    "ending": "370/375"
+                },
+                "5:": {
+                    "starting": "415/436",
+                    "ending": "467/474"
+                },
+                "6:": {
+                    "starting": "511/532",
+                    "ending": "562/567"
+                },
+                "7:": {
+                    "starting": "605/625",
+                    "ending": "656/662"
+                },
+                "8:": {
+                    "starting": "696/716",
+                    "ending": "748/753"
+                },
+                "9:": {
+                    "starting": "793/813",
+                    "ending": "835/840"
+                },
+                "10:": {
+                    "starting": "881/901",
+                    "ending": "930/935"
+                }
+            }
+        }
+    }
+}
